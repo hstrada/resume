@@ -55,23 +55,100 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "zilla_slabmedium";
+  src: url("../fonts/zillaslab-medium-webfont.woff2") format("woff2"),
+    url("../fonts/zillaslab-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* variables */
 :root {
-  --main-bg-color: #f6f6f6;
-  --secondary-bg-color: #FFF;
+  --primary-color: #ffc400;
+  --white-color: #ffffff;
+  --light-gray-color: #f0f0f1;
+  --medium-gray-color: #e9e9e9;
+  --gray-color: #838389;
+  --black-color: #000000;
   --text-font: ralewaylight;
+  --primary-title: zilla_slabbold;
+  --primary-title-size: 48px;
+  --secondary-title: zilla_slabmedium;
+  --secondary-title-size: 42px;
   --default-min-height: 300px;
 }
 
 /* general */
 body {
-  font-family: ralewaylight;
-  background-color: var(--main-bg-color);
+  font-family: var(--text-font);
+  background-color: var(--light-gray-color);
+  color: var(--black-color);
+}
+
+/* reset items */
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0px;
 }
 
 header {
   min-height: var(--default-min-height);
 }
+
+/* fontes */
+h2 {
+  font-family: var(--secondary-title);
+  font-size: var(--secondary-title-size);
+}
+
+.section--line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: -20px;
+}
+
+.section--number {
+  font-size: 62px;
+  font-family: var(--secondary-title);
+  opacity: 7%;
+  margin-left: -20px;
+  margin-top: -5px;
+}
+
+span {
+  bottom: -10px;
+  content: "";
+  height: 7px;
+  width: 60px;
+  border-radius: 2px;
+}
+
+span {
+  background: none repeat scroll 0 0 var(--primary-color);
+}
+
+/* p {
+  position: relative;
+}
+
+p::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 45px;
+  height: 2px;
+  background-color: var(--primary-color);
+} */
 
 /* grid */
 .container {
