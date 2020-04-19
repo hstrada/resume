@@ -136,7 +136,7 @@ h2 span {
   justify-content: center;
   align-items: center;
   align-content: center;
-  /* background-image: url("../../header_background.jpg    ");
+  /* background-image: url("../../header_background.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,6 +162,13 @@ h2 span {
   border-radius: 5px;
 }
 
+.name--professional::before {
+  content: url("../images/circle.png");
+  position: absolute;
+  margin-bottom: 5px;
+  margin-left: 380px;
+}
+
 .name--professional {
   justify-content: center;
   display: flex;
@@ -179,6 +186,10 @@ h2 span {
 .social--network img {
   width: 20px;
   margin: 30px 10px 0px 10px;
+}
+
+.social--network a {
+  text-decoration: none;
 }
 
 /* About */
