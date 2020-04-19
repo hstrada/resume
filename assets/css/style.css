@@ -125,6 +125,7 @@ h2 span {
 /* About */
 #section--about {
   background: var(--white-color);
+  padding: 10px;
 }
 
 .section--about_text {
@@ -135,7 +136,9 @@ h2 span {
 #profile,
 #volunteer,
 #education,
-#courses {
+#courses,
+#professional,
+#skills {
   flex: 1 1 300px;
   margin: 20px 10px;
 }
@@ -185,20 +188,10 @@ span {
   line-height: 20px;
 }
 
-/*Footer*/
-
-.footer {
-  display: flex;
-  background: var(--primary-color);
-  height: 30px;
-  align-items: center;
-}
-
-.footer p {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  color: var(--black-color);
+/* Professional */
+#section--professional {
+  background-color: var(--white-color);
+  padding: 10px;
 }
 
 .section--courses-title {
@@ -268,12 +261,12 @@ span {
   background-color: var(--primary-color);
 }
 
-li {
+#courses li {
   list-style: none;
   margin-bottom: 6px;
 }
 
-li::before {
+#courses li::before {
   content: "";
   display: inline-block;
   width: 5px;
@@ -282,4 +275,70 @@ li::before {
   border-color: var(--primary-color);
   border-style: solid;
   border-width: 1px;
+}
+
+/* Professional */
+#professional p {
+    font-family: var(--primary-paragraph-font);
+    text-align: center;
+}
+
+/* ---- Timeline ---- */
+#section--professional ol {
+  position: relative;
+  display: block;
+  margin-top: 90px;
+  height: 4px;
+  background: #f0f0f1;
+  width: 700px;
+}
+
+/* ---- Timeline elements ---- */
+#section--professional li {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  float: left;
+}
+#section--professional li .professional--year {
+  position: absolute;
+  top: -47px;
+  left: 35%;
+}
+#section--professional li .point {
+  content: "";
+  top: -4px;
+  left: 50%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 4px solid #f0f0f1;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+}
+#section--professional li .description {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+}
+
+/*Footer*/
+
+.footer {
+  display: flex;
+  background: var(--primary-color);
+  height: 30px;
+  align-items: center;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--black-color);
 }
