@@ -133,6 +133,20 @@ h2 span {
   line-height: 20px;
 }
 
+.section--img-overlay_right {
+  position: relative;
+  right: 0px;
+  float: right;
+  top: -40px;
+}
+
+.section--img-overlay_left {
+  position: relative;
+  left: 0px;
+  float: left;
+  top: -40px;
+}
+
 #profile,
 #volunteer,
 #education,
@@ -342,7 +356,7 @@ span {
   flex: 1 1 auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .skills--items div {
     flex: 1 1 300px;
     padding-bottom: 20px;
