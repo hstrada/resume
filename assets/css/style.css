@@ -128,7 +128,7 @@ h2 span {
 }
 
 /* header */
-header {
+#name--header {
   min-height: 250px;
   display: flex;
   flex-direction: column;
@@ -143,10 +143,23 @@ header {
   background-size: cover; */
 }
 
-header h2 {
+#name--header h2 {
   font-family: var(--text-font);
   font-size: 20px;
-  color: var(--primary-color);
+  color: var(--gray-color);
+}
+
+#name--header h2::after {
+  background: var(--primary-color);
+  content: "";
+  display: block;
+  height: 5px;
+  position: relative;
+  margin-top: 10px;
+  width: 15%;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5px;
 }
 
 .name--professional {
