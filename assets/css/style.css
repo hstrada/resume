@@ -72,6 +72,7 @@
   --gray-color: #838389;
   --black-color: #000000;
   --text-font: ralewaylight;
+  --default-font-size: 14px;
   --primary-title: zilla_slabbold;
   --primary-title-size: 48px;
   --secondary-title: zilla_slabmedium;
@@ -80,6 +81,7 @@
   --default-min-height: 300px;
   --primary-paragraph-size: 14px;
   --primary-paragraph-font: ralewayregular;
+  --secondary-paragraph-font: ralewaysemibold;
 }
 
 /* general */
@@ -98,6 +100,7 @@ body {
   background-color: var(--light-gray-color);
   font-family: var(--text-font), Helvetica, Arial, sans-serif;
   color: var(--black-color);
+  font-size: var(--default-font-size);
 }
 
 /* fontes */
@@ -112,12 +115,21 @@ h2 span {
   background-color: transparent;
 }
 
-/* About */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 60px auto;
   display: flex;
   flex-wrap: wrap;
+}
+
+/* About */
+#section--about {
+  background: var(--white-color);
+}
+
+.section--about_text {
+  padding-top: 20px;
+  line-height: 20px;
 }
 
 #profile,
@@ -153,22 +165,121 @@ span {
 }
 
 /* Academic */
-#section--academic {
-  background: #f7f7f7;
+.section--academic-education_container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.section--academic-education_container-date {
+  margin-right: 20px;
+}
+
+.education__year {
+  font-family: var(--secondary-paragraph-font);
+  margin-bottom: 6px;
+}
+
+.section--academic-education_container-title {
+  max-width: 300px;
+  line-height: 20px;
 }
 
 /*Footer*/
 
 .footer {
-	display: flex;
-	background: var(--primary-color);
-	height: 30px;
-	align-items: center;
+  display: flex;
+  background: var(--primary-color);
+  height: 30px;
+  align-items: center;
 }
 
 .footer p {
-	flex: 1;
-	text-align: center;
-	font-size: 12px;
-	color: var(--black-color);
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--black-color);
+}
+
+.section--courses-title {
+  font-family: var(--secondary-paragraph-font);
+  padding-bottom: 5px;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  min-height: 130px;
+}
+
+.slideshow-container {
+  padding-top: 20px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  /* text-align: center; */
+  padding: 20px 20px 20px 0px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  width: 20px;
+}
+
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+  margin-bottom: 6px;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  border-width: 1px;
 }
