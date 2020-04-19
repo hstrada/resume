@@ -194,7 +194,8 @@ span {
   padding: 10px;
 }
 
-.section--courses-title {
+.section--courses-title,
+.section--skills-title {
   font-family: var(--secondary-paragraph-font);
   padding-bottom: 5px;
 }
@@ -261,12 +262,14 @@ span {
   background-color: var(--primary-color);
 }
 
-#courses li {
+#courses li,
+#skills li {
   list-style: none;
   margin-bottom: 6px;
 }
 
-#courses li::before {
+#courses li::before,
+#skills li::before {
   content: "";
   display: inline-block;
   width: 5px;
@@ -279,8 +282,8 @@ span {
 
 /* Professional */
 #professional p {
-    font-family: var(--primary-paragraph-font);
-    text-align: center;
+  font-family: var(--primary-paragraph-font);
+  text-align: center;
 }
 
 /* ---- Timeline ---- */
@@ -325,6 +328,18 @@ span {
   position: relative;
   font-weight: normal;
   z-index: 1;
+}
+
+/* Skills */
+.skills--items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills--items div {
+  flex: 1 1 auto;
 }
 
 /*Footer*/
