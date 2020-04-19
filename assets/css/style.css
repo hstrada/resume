@@ -129,7 +129,7 @@ h2 span {
 
 /* header */
 header {
-  min-height: 400px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -149,13 +149,23 @@ header h2 {
   color: var(--primary-color);
 }
 
+.name--professional {
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 50px;
+}
+
 .social--network {
-    flex-direction: row;
+  flex: 1;
 }
 
 .social--network img {
-    width: 20px;
-    margin: 30px 10px 0px 10px;
+  width: 20px;
+  margin: 30px 10px 0px 10px;
 }
 
 /* About */
