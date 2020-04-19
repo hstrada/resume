@@ -83,32 +83,28 @@
 }
 
 /* general */
-body {
-  font-family: var(--text-font);
-  background-color: var(--light-gray-color);
-  color: var(--black-color);
-  padding: 0px;
-  margin: 0px;
-}
-
-/* reset items */
+body,
 h1,
-h2 {
-  margin: 0;
-}
-
-p {
+h2,
+p,
+ul,
+li,
+a {
   margin: 0px;
+  padding: 0px;
 }
 
-header {
-  min-height: var(--default-min-height);
+body {
+  background-color: var(--light-gray-color);
+  font-family: var(--text-font), Helvetica, Arial, sans-serif;
+  color: var(--black-color);
 }
 
 /* fontes */
 h2 {
   font-family: var(--secondary-title);
   font-size: var(--secondary-title-size);
+  margin-bottom: 0;
 }
 
 h2 span {
@@ -116,31 +112,36 @@ h2 span {
   background-color: transparent;
 }
 
-/* general */
-/* #main {
+/* About */
+.container {
+  max-width: 960px;
+  margin: 60px auto;
   display: flex;
-} */
-/* 
+  flex-wrap: wrap;
+}
+
+#profile,
+#volunteer,
+#education,
+#courses {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+}
+
 .section--line {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   align-items: center;
-  align-content: center;
-  margin-top: -20px;
 }
 
 .section--number {
   font-size: 62px;
   font-family: var(--secondary-title);
   opacity: 7%;
-  margin-left: -20px;
-  margin-top: -5px;
+  margin: -5px 0px 0px -15px;
 }
 
 span {
-  bottom: -10px;
   content: "";
   height: 7px;
   width: 60px;
@@ -151,60 +152,23 @@ span {
   background: none repeat scroll 0 0 var(--primary-color);
 }
 
-/* grid */
-/*.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 1;
-} */
-
-/* specific */
-
-/* text */
-
-/* about */
-/* #section--about {
-  background-color: var(--white-color);
-  min-height: 300px;
-  margin: 60px auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#profile,
-#volunteer {
-  flex: 1 1 300px;
-	margin: 20px 10px;
-}
-
-.section--about_text {
-  font-size: var(--primary-paragraph-size);
-  font-family: var(--primary-paragraph-font);
-  width: 60%;
-  line-height: 20px;
-  margin-top: 20px;
-}
-
+/* Academic */
 #section--academic {
-  min-height: 300px;
-  width: 100%;
-} */
-
-
-#section--about {
-	max-width: 960px;
-	margin: 60px auto;
-	display: flex;
-	flex-wrap: wrap;
+  background: #f7f7f7;
 }
 
-#profile {
-	flex: 1 1 300px;
-	margin: 20px 10px;
+/*Footer*/
+
+.footer {
+	display: flex;
+	background: var(--primary-color);
+	height: 30px;
+	align-items: center;
+}
+
+.footer p {
+	flex: 1;
+	text-align: center;
+	font-size: 12px;
+	color: var(--black-color);
 }
