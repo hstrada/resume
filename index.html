@@ -12,16 +12,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script type="text/javascript" src="i18n/pt-br.json"></script>
+    <script type="text/javascript" src="i18n/en.json"></script>
   </head>
   <body>
     <header>
       <div class="section--img-overlay_left">
         <img src="assets/images/dots.png" />
       </div>
+      <div class="section--txt-overlay_right">
+        <a id="btnLanguage">PT_BR</a>
+      </div>
       <div id="name--header">
         <div class="name--professional">
           <h1>Helena Strada</h1>
-          <h2>Engenheira de Software</h2>
+          <h2 data-i18n="profession"></h2>
         </div>
         <div class="social--network">
           <a href="http://github.com/hstrada" target="_blank">
@@ -47,19 +52,14 @@
       <div class="container">
         <div id="profile">
           <div>
-            <h2>Perfil</h2>
+            <h2 data-i18n="profile.title"></h2>
             <div class="section--line">
               <span></span>
               <p class="section--number">01</p>
             </div>
           </div>
           <div>
-            <p class="section--about_text">
-              Atuo como Engenheira de Software tendo como principais interesses
-              Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de
-              Dados. Apaixonada por livros e tecnologia - principalmente, os
-              dois juntos.
-            </p>
+            <p data-i18n="profile.description" class="section--about_text"></p>
           </div>
         </div>
         <div id="volunteer">
@@ -321,37 +321,39 @@
       <p>Helena Strada - Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+    <script type="text/javascript" src="js/loadSlides.js"></script>
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
+    <script type="text/javascript">
+      let selectedLanguage = ptbr;
+
+      window.onload = loadLanguage(selectedLanguage);
+
+      function loadLanguage(language) {
+        let translation = JSON.stringify(language);
+        let i18n = JSON.parse(translation);
+
+        let data = document.querySelectorAll("[data-i18n]");
+        data.forEach((element) => {
+          if (!element.dataset.i18n.includes("."))
+            element.innerHTML = i18n[element.dataset.i18n];
+          else {
+            element.innerHTML =
+              i18n[element.dataset.i18n.split(".")[0]][
+                element.dataset.i18n.split(".")[1]
+              ];
+          }
+        });
       }
 
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
+      let btnChangeLanguage = document.getElementById("btnLanguage");
+      btnChangeLanguage.onclick = function () {
+        if (selectedLanguage === ptbr) {
+          selectedLanguage = en;
+        } else {
+          selectedLanguage = ptbr;
         }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
+        loadLanguage(selectedLanguage);
+      };
     </script>
   </body>
 </html>

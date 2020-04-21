@@ -1,0 +1,7 @@
+ptbr = {
+  "profession": "Engenheira de Software",
+  "profile" : {
+    "title" : "Perfil",
+    "description" : "Atuo como Engenheira de Software tendo como principais interesses Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de Dados. Apaixonada por livros e tecnologia - principalmente, os dois juntos."
+  }
+}
