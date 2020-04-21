@@ -151,6 +151,7 @@ h2 span {
 
 #aPt, #aEn {
   background-color: transparent;
+  cursor: pointer;
 }
 
 #name--header h2::after {
