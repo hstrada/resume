@@ -21,7 +21,9 @@
         <img src="assets/images/dots.png" />
       </div>
       <div class="section--txt-overlay_right">
-        <a id="btnLanguage">PT_BR</a>
+        <a id="btnLanguage"
+          ><span id="aPt">PT</span>_<span id="aEn">EN</span></a
+        >
       </div>
       <div id="name--header">
         <div class="name--professional">
@@ -325,6 +327,12 @@
 
     <script type="text/javascript">
       let selectedLanguage = ptbr;
+      let aPt = document.getElementById("aPt");
+      let aEn = document.getElementById("aEn");
+
+      const defaultColor = "#ffc400";
+
+      // aPt.style.backgroundColor = defaultColor;
 
       window.onload = loadLanguage(selectedLanguage);
 
@@ -349,8 +357,12 @@
       btnChangeLanguage.onclick = function () {
         if (selectedLanguage === ptbr) {
           selectedLanguage = en;
+          aEn.style.backgroundColor = defaultColor;
+          aPt.style.backgroundColor = "transparent";
         } else {
           selectedLanguage = ptbr;
+          aPt.style.backgroundColor = defaultColor;
+          aEn.style.backgroundColor = "transparent";
         }
         loadLanguage(selectedLanguage);
       };

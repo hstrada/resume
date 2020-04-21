@@ -149,6 +149,10 @@ h2 span {
   color: var(--gray-color);
 }
 
+#aPt, #aEn {
+  background-color: transparent;
+}
+
 #name--header h2::after {
   background: var(--primary-color);
   content: "";
@@ -157,6 +161,19 @@ h2 span {
   position: relative;
   margin-top: 10px;
   width: 15%;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5px;
+}
+
+#btnLanguage::after {
+  background: var(--primary-color);
+  content: "";
+  display: block;
+  height: 5px;
+  position: relative;
+  margin-top: 10px;
+  width: 40px;
   transform: translateX(-50%);
   left: 50%;
   border-radius: 5px;
