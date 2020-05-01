@@ -18,10 +18,6 @@ Atuo como Engenheira de Software tendo como principais interesses Arquitetura de
 **Instrutor de Formação Profissional III** - 2017 - 2019
 **Desenvolvedor BackEnd/FrontEnd** - 2016 - 2018
 
-**Engenheiro de Software** - Jan/2020 - Atual
-**Instrutor de Formação Profissional III** - 2017 - 2019
-**Desenvolvedor BackEnd/FrontEnd** - 2016 - 2018
-
 ## Conhecimentos Técnicos
 
 **Backend**
