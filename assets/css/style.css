@@ -84,18 +84,6 @@
   --secondary-paragraph-font: ralewaysemibold;
 }
 
-/* general */
-/* body,
-h1,
-h2,
-p,
-ul,
-li,
-a {
-  margin: 0px;
-  padding: 0px;
-} */
-
 * {
   margin: 0;
   padding: 0;
